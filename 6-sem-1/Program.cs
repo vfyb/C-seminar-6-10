@@ -23,4 +23,3 @@ int[] result = ReverseArray(array);
 for ( int i = 0; i < 5; i++) Console.Write($"{array[i]}, ");
 Console.WriteLine();
 for ( int i = 0; i < 5; i++) Console.Write($"{result[i]}, ");
-
