@@ -39,22 +39,28 @@ int[,] GetValuesForLines()
 }
 
 // Get array with intersection point coordinates
-double[] GetIntersection(int[,] lines)
+void GetIntersection(int[,] lines)
 {
-    // double x = ( b2 - b1 ) / ( k1 - k2 );
-    // double y = k1 * x + b1;
+    if ( lines[0, 0] == lines[1, 0] )
+    {
+        if ( lines[0, 1] == lines[1, 1] )
+        {
+            Console.WriteLine("This lines are the same.");
+        }
+        else
+        {
+            Console.WriteLine("There is no intersection of this line.");
+        }
+    }
+    else
+    {
+        double x = (double)( lines[1, 1] - lines[0, 1] ) / ( lines[0, 0] - lines[1, 0] );
+        double y = (double)(lines[0, 0] * x + lines[0, 1]);
 
-    // With array:
-    double x = (double)( lines[1, 1] - lines[0, 1] ) / ( lines[0, 0] - lines[1, 0] );
-    double y = (double)(lines[0, 0] * x + lines[0, 1]);
-
-    double[] result = new double[] {x, y};
-    
-    return result;
+        Console.WriteLine($"Lines ( y = {lines[0, 0]}x + {lines[0, 1]} ) and ( y = {lines[1, 0]}x + {lines[1, 1]} )");
+        Console.WriteLine($"Intersect in point [ {x}, {y} ]");
+    }
 }
 
 int[,] userLines = GetValuesForLines();
-double[] intersectionPoint = GetIntersection(userLines);
-
-Console.WriteLine($"Lines ( y = {userLines[0, 0]}x + {userLines[0, 1]} ) and ( y = {userLines[1, 0]}x + {userLines[1, 1]} )");
-Console.WriteLine($"Intersect in point [ {intersectionPoint[0]}, {intersectionPoint[1]} ]");
+GetIntersection(userLines);
