@@ -31,7 +31,6 @@ string ConvertToBinary(int num)
         result = Convert.ToString(num % 2) + result;
         num = num / 2;
     } 
-
     return result;
 }
 
