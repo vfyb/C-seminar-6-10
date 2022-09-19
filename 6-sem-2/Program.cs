@@ -56,3 +56,4 @@ int[] triangleArray = GetTriangleArray();
 bool checkAbility = CheckAbilityOfTriangle(triangleArray);
 
 Console.WriteLine($"Triangle: {checkAbility}");
+
