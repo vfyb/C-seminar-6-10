@@ -55,7 +55,7 @@ void GetIntersection(int[,] lines)
     else
     {
         double x = (double)( lines[1, 1] - lines[0, 1] ) / ( lines[0, 0] - lines[1, 0] );
-        double y = (double)(lines[0, 0] * x + lines[0, 1]);
+        double y = (double)( lines[0, 0] * x + lines[0, 1] );
 
         Console.WriteLine($"Lines ( y = {lines[0, 0]}x + {lines[0, 1]} ) and ( y = {lines[1, 0]}x + {lines[1, 1]} )");
         Console.WriteLine($"Intersect in point [ {x}, {y} ]");
