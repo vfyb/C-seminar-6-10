@@ -49,7 +49,6 @@ int[] Fibonacci(int num)
             result[i] = result[i-2] + result[i-1];
         }
     }
-
     return result;
 }
 
