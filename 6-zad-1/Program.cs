@@ -4,6 +4,7 @@
 // 0, 7, 8, -2, -2 -> 2
 // 1, -7, 567, 89, 223-> 3
 
+// Get int number or null
 int? GetAnyNumber(string text)
 {
     Console.WriteLine($"Input {text}: ");
@@ -29,6 +30,7 @@ int? GetAnyNumber(string text)
     }
 }
 
+// Print array to Console
 void PrintArray(int[] array)
 {
     Console.Write($"[ ");
@@ -39,6 +41,7 @@ void PrintArray(int[] array)
     }
 }
 
+// Create array from user numbers
 int[] GetArrayWithUserNumbers()
 {
     int[] array = new int[0];
@@ -61,6 +64,7 @@ int[] GetArrayWithUserNumbers()
     return array;
 } 
 
+// Count quantity of numbers in array which bigger then zero
 int CountNumbersBiggerZero(int[] array)
 {
     int result = 0;
