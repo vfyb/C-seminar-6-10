@@ -49,7 +49,7 @@ void GetIntersection(int[,] lines)
         }
         else
         {
-            Console.WriteLine("There is no intersection of this line.");
+            Console.WriteLine("There is no intersection of this lines.");
         }
     }
     else
