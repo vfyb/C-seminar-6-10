@@ -7,7 +7,7 @@
 // 8 7,8 -7,1 9
 
 // Get int number from user
-int GetAnyNumber(string text)
+int GetAnyIntNumber(string text)
 {
     Console.WriteLine($"Input {text}: ");
 
@@ -57,8 +57,8 @@ void PrintArrayToConsole(double[,] array)
     }
 }
 
-int row = GetAnyNumber("quantuty of rows");
-int column = GetAnyNumber("quantuty of columns");
+int row = GetAnyIntNumber("quantuty of rows");
+int column = GetAnyIntNumber("quantuty of columns");
 
 if (row > 0 && column > 0)
 {
