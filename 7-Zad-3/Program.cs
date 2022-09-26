@@ -54,6 +54,7 @@ void PrintArrayToConsole(int[,] array)
     }
 }
 
+// Find average of elements in columns
 void FindAverageOfColumns(int[,] array)
 {
     for (int j = 0; j < array.GetLength(1); j++)
