@@ -59,59 +59,59 @@ void PrintArrayToConsole(int[,] array)
 }
 
 // Bubble sort in rows writen by me
-// int[,] SortRowElementMaxToMin(int[,] array)
-// {
-//     int temp = 0;
-//     // Repeat cycle in row (Bubble sort)
-//     int repeat = 1;
-
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         repeat = 1;
-//         // Repeat cycle in row (Bubble sort)
-//         while (repeat < array.GetLength(1))
-//         {
-//             for (int j = 0; j < array.GetLength(1) - 1; j++)
-//             {
-//                 if (array[i, j] < array[i, j + 1])
-//                 {
-//                     temp = array[i, j + 1];
-//                     array[i, j + 1] = array[i, j];
-//                     array[i, j] = temp;
-//                 }
-//             }
-//             repeat++;
-//         }
-//     }
-
-//     return array;
-// }
-
-// Sort with Array.Sort method
 int[,] SortRowElementMaxToMin(int[,] array)
 {
-    int[] rowArray = new int[array.GetLength(1)];
+    int temp = 0;
+    // Repeat cycle in row (Bubble sort)
+    int repeat = 1;
 
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        // Extract row from array
-        for (int j = 0; j < array.GetLength(1); j++)
+        repeat = 1;
+        // Repeat cycle in row (Bubble sort)
+        while (repeat < array.GetLength(1))
         {
-            rowArray[j] = array[i, j];
+            for (int j = 0; j < array.GetLength(1) - 1; j++)
+            {
+                if (array[i, j] < array[i, j + 1])
+                {
+                    temp = array[i, j + 1];
+                    array[i, j + 1] = array[i, j];
+                    array[i, j] = temp;
+                }
+            }
+            repeat++;
         }
-
-        // Sort row from max to min
-        Array.Sort(rowArray, (x, y) => y.CompareTo(x));
-
-        // Insert row to array
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            array[i, j] = rowArray[j];
-        }
-
     }
+
     return array;
 }
+
+// Sort with Array.Sort method
+// int[,] SortRowElementMaxToMin(int[,] array)
+// {
+//     int[] rowArray = new int[array.GetLength(1)];
+
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         // Extract row from array
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             rowArray[j] = array[i, j];
+//         }
+
+//         // Sort row from max to min
+//         Array.Sort(rowArray, (x, y) => y.CompareTo(x));
+
+//         // Insert row to array
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = rowArray[j];
+//         }
+
+//     }
+//     return array;
+// }
 
 int row = GetAnyIntNumber("rows");
 int column = GetAnyIntNumber("columns");
