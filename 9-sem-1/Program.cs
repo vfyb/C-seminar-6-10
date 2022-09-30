@@ -9,6 +9,7 @@ bool SearchElem(int[] array, int value)
             return true;
         }
     }
+    return false;
 }
 
 int[] array = new int[10];
